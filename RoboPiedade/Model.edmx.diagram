@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="73ab0af793b64a8ab98ba2f74d12a28a" Name="Diagram1">
+        <EntityTypeShape EntityType="UrBUSModel.Bairros" Width="1.5" PointX="0.75" PointY="5.125" />
+        <EntityTypeShape EntityType="UrBUSModel.Horarios" Width="1.5" PointX="3" PointY="1.375" />
+        <EntityTypeShape EntityType="UrBUSModel.Itinerarios" Width="1.5" PointX="3" PointY="9.375" />
+        <EntityTypeShape EntityType="UrBUSModel.Mapas" Width="1.5" PointX="3" PointY="4.25" />
+        <EntityTypeShape EntityType="UrBUSModel.Observacoes" Width="1.5" PointX="3" PointY="6.75" />
+        <AssociationConnector Association="UrBUSModel.FK_Horarios_Bairros" />
+        <AssociationConnector Association="UrBUSModel.FK_Itinerarios_Bairros" />
+        <AssociationConnector Association="UrBUSModel.FK_Mapas_Mapas" />
+        <AssociationConnector Association="UrBUSModel.FK_Observacoes_Bairros" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

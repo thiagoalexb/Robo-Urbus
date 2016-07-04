@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UrBUSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Bairros">
+    <Key>
+      <PropertyRef Name="IdBairro" />
+    </Key>
+    <Property Name="IdBairro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NomeBairro" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="DataUltimaAtualizacao" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Horarios">
+    <Key>
+      <PropertyRef Name="IdHorario" />
+    </Key>
+    <Property Name="IdHorario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdBairro" Type="int" Nullable="false" />
+    <Property Name="TipoSaida" Type="tinyint" />
+    <Property Name="TipoDia" Type="tinyint" />
+    <Property Name="Hora" Type="varchar" MaxLength="5" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Itinerarios">
+    <Key>
+      <PropertyRef Name="IdItinerario" />
+    </Key>
+    <Property Name="IdItinerario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdBairro" Type="int" Nullable="false" />
+    <Property Name="Rua" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="TipoSaida" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Mapas">
+    <Key>
+      <PropertyRef Name="IdMapa" />
+    </Key>
+    <Property Name="IdMapa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdBairro" Type="int" Nullable="false" />
+    <Property Name="LinkMapa" Type="varchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Observacoes">
+    <Key>
+      <PropertyRef Name="IdObservacao" />
+    </Key>
+    <Property Name="IdObservacao" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdBairro" Type="int" Nullable="false" />
+    <Property Name="Observacao" Type="varchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Horarios_Bairros">
+    <End Role="Bairros" Type="Self.Bairros" Multiplicity="1" />
+    <End Role="Horarios" Type="Self.Horarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bairros">
+        <PropertyRef Name="IdBairro" />
+      </Principal>
+      <Dependent Role="Horarios">
+        <PropertyRef Name="IdBairro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Itinerarios_Bairros">
+    <End Role="Bairros" Type="Self.Bairros" Multiplicity="1" />
+    <End Role="Itinerarios" Type="Self.Itinerarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bairros">
+        <PropertyRef Name="IdBairro" />
+      </Principal>
+      <Dependent Role="Itinerarios">
+        <PropertyRef Name="IdBairro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mapas_Mapas">
+    <End Role="Bairros" Type="Self.Bairros" Multiplicity="1" />
+    <End Role="Mapas" Type="Self.Mapas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bairros">
+        <PropertyRef Name="IdBairro" />
+      </Principal>
+      <Dependent Role="Mapas">
+        <PropertyRef Name="IdBairro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Observacoes_Bairros">
+    <End Role="Bairros" Type="Self.Bairros" Multiplicity="1" />
+    <End Role="Observacoes" Type="Self.Observacoes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bairros">
+        <PropertyRef Name="IdBairro" />
+      </Principal>
+      <Dependent Role="Observacoes">
+        <PropertyRef Name="IdBairro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="UrBUSModelStoreContainer">
+    <EntitySet Name="Bairros" EntityType="Self.Bairros" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Horarios" EntityType="Self.Horarios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Itinerarios" EntityType="Self.Itinerarios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mapas" EntityType="Self.Mapas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Observacoes" EntityType="Self.Observacoes" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Horarios_Bairros" Association="Self.FK_Horarios_Bairros">
+      <End Role="Bairros" EntitySet="Bairros" />
+      <End Role="Horarios" EntitySet="Horarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Itinerarios_Bairros" Association="Self.FK_Itinerarios_Bairros">
+      <End Role="Bairros" EntitySet="Bairros" />
+      <End Role="Itinerarios" EntitySet="Itinerarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mapas_Mapas" Association="Self.FK_Mapas_Mapas">
+      <End Role="Bairros" EntitySet="Bairros" />
+      <End Role="Mapas" EntitySet="Mapas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Observacoes_Bairros" Association="Self.FK_Observacoes_Bairros">
+      <End Role="Bairros" EntitySet="Bairros" />
+      <End Role="Observacoes" EntitySet="Observacoes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

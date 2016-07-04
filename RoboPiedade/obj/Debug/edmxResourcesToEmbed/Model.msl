@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UrBUSModelStoreContainer" CdmEntityContainer="UrBUSEntities">
+    <EntitySetMapping Name="Bairros">
+      <EntityTypeMapping TypeName="UrBUSModel.Bairros">
+        <MappingFragment StoreEntitySet="Bairros">
+          <ScalarProperty Name="DataUltimaAtualizacao" ColumnName="DataUltimaAtualizacao" />
+          <ScalarProperty Name="NomeBairro" ColumnName="NomeBairro" />
+          <ScalarProperty Name="IdBairro" ColumnName="IdBairro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Horarios">
+      <EntityTypeMapping TypeName="UrBUSModel.Horarios">
+        <MappingFragment StoreEntitySet="Horarios">
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="TipoDia" ColumnName="TipoDia" />
+          <ScalarProperty Name="TipoSaida" ColumnName="TipoSaida" />
+          <ScalarProperty Name="IdBairro" ColumnName="IdBairro" />
+          <ScalarProperty Name="IdHorario" ColumnName="IdHorario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Itinerarios">
+      <EntityTypeMapping TypeName="UrBUSModel.Itinerarios">
+        <MappingFragment StoreEntitySet="Itinerarios">
+          <ScalarProperty Name="TipoSaida" ColumnName="TipoSaida" />
+          <ScalarProperty Name="Rua" ColumnName="Rua" />
+          <ScalarProperty Name="IdBairro" ColumnName="IdBairro" />
+          <ScalarProperty Name="IdItinerario" ColumnName="IdItinerario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mapas">
+      <EntityTypeMapping TypeName="UrBUSModel.Mapas">
+        <MappingFragment StoreEntitySet="Mapas">
+          <ScalarProperty Name="LinkMapa" ColumnName="LinkMapa" />
+          <ScalarProperty Name="IdBairro" ColumnName="IdBairro" />
+          <ScalarProperty Name="IdMapa" ColumnName="IdMapa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Observacoes">
+      <EntityTypeMapping TypeName="UrBUSModel.Observacoes">
+        <MappingFragment StoreEntitySet="Observacoes">
+          <ScalarProperty Name="Observacao" ColumnName="Observacao" />
+          <ScalarProperty Name="IdBairro" ColumnName="IdBairro" />
+          <ScalarProperty Name="IdObservacao" ColumnName="IdObservacao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

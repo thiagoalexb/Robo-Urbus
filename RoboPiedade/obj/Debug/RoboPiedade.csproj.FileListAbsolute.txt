@@ -1,0 +1,13 @@
+C:\Users\Thiago\documents\visual studio 2015\Projects\RoboPiedade\RoboPiedade\bin\Debug\RoboPiedade.exe.config
+C:\Users\Thiago\documents\visual studio 2015\Projects\RoboPiedade\RoboPiedade\bin\Debug\RoboPiedade.exe
+C:\Users\Thiago\documents\visual studio 2015\Projects\RoboPiedade\RoboPiedade\bin\Debug\RoboPiedade.pdb
+C:\Users\Thiago\documents\visual studio 2015\Projects\RoboPiedade\RoboPiedade\bin\Debug\EntityFramework.dll
+C:\Users\Thiago\documents\visual studio 2015\Projects\RoboPiedade\RoboPiedade\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Thiago\documents\visual studio 2015\Projects\RoboPiedade\RoboPiedade\bin\Debug\EntityFramework.xml
+C:\Users\Thiago\documents\visual studio 2015\Projects\RoboPiedade\RoboPiedade\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Thiago\documents\visual studio 2015\Projects\RoboPiedade\RoboPiedade\obj\Debug\RoboPiedade.csprojResolveAssemblyReference.cache
+C:\Users\Thiago\documents\visual studio 2015\Projects\RoboPiedade\RoboPiedade\obj\Debug\RoboPiedade.SalvarDadosUrbas.resources
+C:\Users\Thiago\documents\visual studio 2015\Projects\RoboPiedade\RoboPiedade\obj\Debug\RoboPiedade.Properties.Resources.resources
+C:\Users\Thiago\documents\visual studio 2015\Projects\RoboPiedade\RoboPiedade\obj\Debug\RoboPiedade.csproj.GenerateResource.Cache
+C:\Users\Thiago\documents\visual studio 2015\Projects\RoboPiedade\RoboPiedade\obj\Debug\RoboPiedade.exe
+C:\Users\Thiago\documents\visual studio 2015\Projects\RoboPiedade\RoboPiedade\obj\Debug\RoboPiedade.pdb
